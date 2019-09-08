@@ -10,10 +10,12 @@
 namespace ipp
 {
     template<typename T>
-    void print_ip(const T &ip)
+    std::string print_ip(const T &ip)
     {
+        using T_unsigned = std::make_unsigned<T>::type;
+
         std::string tmp{""};
-        std::make_unsigned<T>::type x = ip;
+        T_unsigned x = ip;
         unsigned k{sizeof(T)};
         unsigned sh{0};
 
@@ -21,26 +23,26 @@ namespace ipp
         {
             sh = (k - i - 1)*CHAR_BIT;
             tmp += (std::to_string(x>>sh) + ".");
-            x &= ((1<<sh) - 1);
+            x &= ((static_cast<T_unsigned>(1)<<sh) - 1);
         }
 
         tmp.pop_back(); // remove last '.'
 
-        print_ip(tmp);
+        return std::move(tmp);
     }
     //-------------------------------------
 
 
     template<> 
-    void print_ip(const std::string &ip)
+    std::string print_ip(const std::string &ip)
     {
-        std::cout << ip << std::endl;
+        return ip;
     }
     //-------------------------------------
 
 
     template<typename T> 
-    void print_ip(const std::vector<T> &ip)
+    std::string print_ip(const std::vector<T> &ip)
     {
         std::string tmp{""};
 
@@ -49,13 +51,13 @@ namespace ipp
             
         tmp.pop_back(); // remove last '.'
 
-        print_ip(tmp);
+        return std::move(tmp);
     }
     //-------------------------------------
 
 
     template<typename T> 
-    void print_ip(const std::list<T> &ip)
+    std::string print_ip(const std::list<T> &ip)
     {
         std::string tmp{""};
 
@@ -64,7 +66,7 @@ namespace ipp
             
         tmp.pop_back(); // remove last '.'
 
-        print_ip(tmp);
+        return std::move(tmp);
     }
     //-------------------------------------
 }
