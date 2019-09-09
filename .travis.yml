@@ -6,10 +6,6 @@ addons:
  apt:
    packages:
     - doxygen      
-    - doxygen-doc
-    - doxygen-latex
-    - doxygen-gui
-    - graphviz
 
 before_script:
   #install google-test
@@ -39,7 +35,6 @@ deploy:
 
   provider: pages
   skip_cleanup: true
-  local_dir: $TRAVIS_BUILD_DIR/dox/html
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
