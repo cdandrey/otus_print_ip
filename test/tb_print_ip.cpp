@@ -1,6 +1,6 @@
 
-#include "..\lib\print_ip.h"
-#include <gtest\gtest.h>
+#include "../lib/print_ip.h"
+#include <gtest/gtest.h>
 #include <iostream>
 #include <sstream>
 #include <string>
