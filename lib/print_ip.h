@@ -6,6 +6,7 @@
 #include <vector>
 #include <list>
 #include <cstdint>
+#include <limits>
 
 namespace ipp
 {
@@ -38,7 +39,7 @@ namespace ipp
         {
             sh = (k - i - 1)*CHAR_BIT;
             tmp += (std::to_string(x>>sh) + ".");
-            x &= ((static_cast<UT>::type>(1)<<sh) - 1);
+            x &= ((static_cast<UT>(1)<<sh) - 1);
         }
 
         tmp.pop_back(); // remove last '.'

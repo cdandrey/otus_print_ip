@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <tuple>
 #include <random>
 
 static const unsigned N{1000};
