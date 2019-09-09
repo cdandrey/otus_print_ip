@@ -12,21 +12,6 @@
 namespace ipp
 {
     template<typename T>
-    void print_ip(const T& ip)
-    {
-        std::cout << to_string(ip) << std::endl;
-    }
-    //-------------------------------------
-
-    template<> 
-    void print_ip(const std::string &ip)
-    {
-        std::cout << ip << std::endl;
-    }
-    //-------------------------------------
-
-
-    template<typename T>
     std::string to_string(const T &ip)
     {
         using UT = typename std::make_unsigned<T>::type;
@@ -79,6 +64,7 @@ namespace ipp
     }
     //-------------------------------------
 
+
     template<typename T>
     std::string to_string(const std::tuple<T,T,T,T> &ip)
     {
@@ -91,4 +77,21 @@ namespace ipp
 
         return std::move(tmp);
     }
+    //-------------------------------------
+
+
+    template<typename T>
+    void print_ip(const T& ip)
+    {
+        std::cout << to_string(ip) << std::endl;
+    }
+    //-------------------------------------
+
+
+    template<> 
+    void print_ip(const std::string &ip)
+    {
+        std::cout << ip << std::endl;
+    }
+    //-------------------------------------
 }
