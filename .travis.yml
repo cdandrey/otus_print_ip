@@ -1,8 +1,12 @@
 language: cpp
+branches:
+  only:
+    - master
 addons:
  apt:
    packages:
-     - doxygen
+    - doxygen      
+
 before_script:
   #install google-test
 - sudo apt-get install libgtest-dev
