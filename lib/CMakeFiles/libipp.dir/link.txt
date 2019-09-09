@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibipp.a  CMakeFiles/libipp.dir/print_ip.cpp.o
+/usr/bin/ranlib liblibipp.a

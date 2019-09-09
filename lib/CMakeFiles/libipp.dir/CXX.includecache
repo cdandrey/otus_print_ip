@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/cdandrey/otus_print_ip/lib/print_ip.cpp
+print_ip.h
+/home/travis/build/cdandrey/otus_print_ip/lib/print_ip.h
+
+/home/travis/build/cdandrey/otus_print_ip/lib/print_ip.h
+iostream
+-
+string
+-
+vector
+-
+list
+-
+tuple
+-
+cstdint
+-
+climits
+-
+
