@@ -1,4 +1,8 @@
 language: cpp
+addons:
+ apt:
+   packages:
+     - doxygen
 before_script:
   #install google-test
 - sudo apt-get install libgtest-dev
@@ -18,6 +22,7 @@ script:
 - cmake .
 - cmake --build .
 - cmake --build . --target package
+- doxygen Doxyfile
 deploy:
   provider: script
   skip_cleanup: true
