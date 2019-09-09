@@ -2,7 +2,7 @@ language: cpp
 before_script:
   #install google-test
 - sudo apt-get install doxygen
-- cd /cdandrey/otus_print_ip/
+- cd /usr/cdandrey/otus_print_ip/
 - doxygen Doxyfile
 - sudo apt-get install libgtest-dev
 - sudo apt-get install cmake # install cmake
