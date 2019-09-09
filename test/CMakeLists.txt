@@ -1,11 +1,11 @@
 
-# test allocator
+# test print_ip
 
 cmake_minimum_required(VERSION 3.2)
 
 set(THIS test)
-set(SOURCES test_allocator.cpp)
-set(LIBS liballoc)
+set(SOURCES tb_print_ip.cpp)
+set(LIBS libipp)
 
 if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
     project(${THIS} VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
@@ -18,9 +18,9 @@ find_package(Threads REQUIRED)
 
 add_executable(${THIS} ${SOURCES})
 
-include_directories(
-    ${GTEST_INCLUDE_DIRS}
-)
+#include_directories(
+#    ${GTEST_INCLUDE_DIRS}
+#)
 
 set_target_properties(
     ${THIS}
