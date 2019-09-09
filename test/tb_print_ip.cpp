@@ -1,6 +1,8 @@
 
 #include "..\lib\print_ip.h"
 #include <gtest\gtest.h>
+#include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <list>
@@ -121,8 +123,13 @@ TEST(test_print_ip,long_test)
 
 TEST(test_print_ip,string_test)
 {
+    std::ostringstream local_cout;
+    auto cout_buff = std::cout.rdbuf();
+    std::cout.rdbuf(local_cout.rdbuf());
+
     std::string ip_gold;
     unsigned ip_term;
+    unsigned ip_pos_begin;
 
     for (unsigned i = 0; i < N; ++i)
     {
@@ -137,13 +144,23 @@ TEST(test_print_ip,string_test)
 
         ip_gold.pop_back();  // remove last '.'
 
-        EXPECT_EQ(ipp::to_string(ip_gold),ip_gold);
+        ipp::print_ip(ip_gold);
+
+        ip_pos_begin = local_cout.str().length() - ip_gold.length() - 1;
+        EXPECT_EQ(local_cout.str().substr(ip_pos_begin,ip_gold.length()),ip_gold);
     }
 
     ip_gold = "255.255.255.255";
-    EXPECT_EQ(ipp::to_string(ip_gold),"255.255.255.255");
+    ipp::print_ip(ip_gold);
+    ip_pos_begin = local_cout.str().length() - ip_gold.length() - 1;
+    EXPECT_EQ(local_cout.str().substr(ip_pos_begin,ip_gold.length()),ip_gold);
+
     ip_gold = "127.255.255.255";
-    EXPECT_EQ(ipp::to_string(ip_gold),"127.255.255.255");
+    ipp::print_ip(ip_gold);
+    ip_pos_begin = local_cout.str().length() - ip_gold.length() - 1;
+    EXPECT_EQ(local_cout.str().substr(ip_pos_begin,ip_gold.length()),ip_gold);
+
+    std::cout.rdbuf(cout_buff);
 }
 //---------------------------------------------------------------------------------------
 

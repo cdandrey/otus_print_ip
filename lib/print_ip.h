@@ -16,8 +16,16 @@ namespace ipp
     }
     //-------------------------------------
 
+    template<> 
+    void print_ip(const std::string &ip)
+    {
+        std::cout << ip << std::endl;
+    }
+    //-------------------------------------
+
+
     template<typename T>
-    auto to_string(const T &ip)
+    std::string to_string(const T &ip)
     {
         using UT = std::make_unsigned<T>::type;
 
@@ -39,15 +47,9 @@ namespace ipp
     }
     //-------------------------------------
 
-    template<> 
-    auto to_string(const std::string &ip)
-    {
-        return ip;
-    }
-    //-------------------------------------
 
     template<typename T> 
-    auto to_string(const std::vector<T> &ip)
+    std::string to_string(const std::vector<T> &ip)
     {
         std::string tmp{""};
 
@@ -62,7 +64,7 @@ namespace ipp
 
 
     template<typename T> 
-    auto to_string(const std::list<T> &ip)
+    std::string to_string(const std::list<T> &ip)
     {
         std::string tmp{""};
 
@@ -76,7 +78,7 @@ namespace ipp
     //-------------------------------------
 
     template<typename T>
-    auto to_string(const std::tuple<T,T,T,T> &ip)
+    std::string to_string(const std::tuple<T,T,T,T> &ip)
     {
         std::string tmp{""};
 
