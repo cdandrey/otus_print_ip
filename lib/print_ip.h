@@ -5,8 +5,9 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <tuple>
 #include <cstdint>
-#include <limits>
+#include <climits>
 
 namespace ipp
 {
