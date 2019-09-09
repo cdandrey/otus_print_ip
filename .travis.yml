@@ -15,7 +15,8 @@ before_script:
 - sudo apt-get update -qq
 - sudo apt-get install doxygen
 - cd $TRAVIS_BUILD_DIR
-- doxygen ../Doxyfile
+- pwd
+- doxygen ../../Doxyfile
 script:
 - cmake .
 - cmake --build .
