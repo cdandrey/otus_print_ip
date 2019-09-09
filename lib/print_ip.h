@@ -27,7 +27,7 @@ namespace ipp
     template<typename T>
     std::string to_string(const T &ip)
     {
-        using UT = std::make_unsigned<T>::type;
+        using UT = std::make_unsigned<typename T>::type;
 
         std::string tmp{""};
         UT x = ip;
