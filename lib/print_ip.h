@@ -30,7 +30,7 @@ namespace ipp
 
         tmp.pop_back(); // remove last '.'
 
-        return std::move(tmp);
+        return tmp;
     }
     //-------------------------------------
 
@@ -45,7 +45,7 @@ namespace ipp
             
         tmp.pop_back(); // remove last '.'
 
-        return std::move(tmp);
+        return tmp;
     }
     //-------------------------------------
 
@@ -60,7 +60,7 @@ namespace ipp
             
         tmp.pop_back(); // remove last '.'
 
-        return std::move(tmp);
+        return tmp;
     }
     //-------------------------------------
 
@@ -75,7 +75,7 @@ namespace ipp
               + "." + std::to_string(std::get<2>(ip)) 
               + "." + std::to_string(std::get<3>(ip));
 
-        return std::move(tmp);
+        return tmp;
     }
     //-------------------------------------
 
