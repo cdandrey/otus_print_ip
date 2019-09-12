@@ -69,7 +69,7 @@ namespace ipp
     template<std::size_t I,typename F,typename... A>
     struct foreach
     {
-        static void next(F& f,const std::tuple<A...>& t)
+        static void next(const F& f,const std::tuple<A...>& t)
         {
             const std::size_t i = sizeof...(A) - I; 
             f.operator()( std::get<i>(t) );
@@ -82,13 +82,13 @@ namespace ipp
     template<typename F,typename... A>
     struct foreach<0,F,A...>
     {
-        static void next(F&,const std::tuple<A...>&){}
+        static void next(const F&,const std::tuple<A...>&){}
     };
     //-------------------------------------
 
 
     template<typename F,typename... A>
-    void foreach_tuple(F &f,const std::tuple<A...> &t)
+    void foreach_tuple(const F &f,const std::tuple<A...> &t)
     {
         foreach<sizeof...(A),F,A...>::next(f,t);
     }
