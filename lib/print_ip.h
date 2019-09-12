@@ -100,11 +100,19 @@ namespace ipp
     {
         std::string tmp{""};
 
-        //foreach_tuple([&tmp](const auto& x){tmp += std::to_string(x) + ".";},ip);
+        foreach_tuple([&tmp](const auto& x){tmp += std::to_string(x) + ".";},ip);
 
         tmp.pop_back();
 
         return tmp;
+    }
+    //-------------------------------------
+
+
+    template<typename... A>
+    void print_ip(const std::tuple<A...>& ip)
+    {
+        std::cout << to_string(ip) << std::endl;
     }
     //-------------------------------------
 
