@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['platform_5fid',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
-  ['print_5fip',['print_ip',['../namespaceipp.html#a82797e0f5a729cf7c99fa2f72a1aaa11',1,'ipp::print_ip(const T &amp;ip)'],['../namespaceipp.html#af72c3acd26ec33d2f75ce879e65b6f01',1,'ipp::print_ip(const std::string &amp;ip)']]],
-  ['print_5fip_2ecpp',['print_ip.cpp',['../print__ip_8cpp.html',1,'']]],
-  ['print_5fip_2eh',['print_ip.h',['../print__ip_8h.html',1,'']]]
+  ['next',['next',['../structipp_1_1foreach.html#ac57155a1cddf014b176a023b408d6794',1,'ipp::foreach::next()'],['../structipp_1_1foreach_3_010_00_01_f_00_01_a_8_8_8_01_4.html#a38280ed72e3a306dbaea64d504a8ee43',1,'ipp::foreach&lt; 0, F, A... &gt;::next()']]]
 ];

@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -81,12 +82,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ipp Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structipp_1_1foreach.html">foreach</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structipp_1_1foreach_3_010_00_01_f_00_01_a_8_8_8_01_4.html">foreach&lt; 0, F, A... &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a57054e131d2b93c77ee51e0af0464800"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -98,9 +107,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a22040ad7c4c4a69bbbaad2ed586a9d34"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a22040ad7c4c4a69bbbaad2ed586a9d34"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#a22040ad7c4c4a69bbbaad2ed586a9d34">to_string</a> (const std::list&lt; T &gt; &amp;ip)</td></tr>
 <tr class="separator:a22040ad7c4c4a69bbbaad2ed586a9d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37fa5b8fff60e9b06f963a193b6775cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a37fa5b8fff60e9b06f963a193b6775cb"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#a37fa5b8fff60e9b06f963a193b6775cb">to_string</a> (const std::tuple&lt; T, T, T, T &gt; &amp;ip)</td></tr>
-<tr class="separator:a37fa5b8fff60e9b06f963a193b6775cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08c0c4ff2afb1260830aabc3dab4f9c"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... A&gt; </td></tr>
+<tr class="memitem:ac08c0c4ff2afb1260830aabc3dab4f9c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#ac08c0c4ff2afb1260830aabc3dab4f9c">foreach_tuple</a> (const F &amp;f, const std::tuple&lt; A... &gt; &amp;t)</td></tr>
+<tr class="separator:ac08c0c4ff2afb1260830aabc3dab4f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4870e24f6c87aa598de8725fea9ab2ff"><td class="memTemplParams" colspan="2">template&lt;typename... A&gt; </td></tr>
+<tr class="memitem:a4870e24f6c87aa598de8725fea9ab2ff"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#a4870e24f6c87aa598de8725fea9ab2ff">to_string</a> (const std::tuple&lt; A... &gt; &amp;ip)</td></tr>
+<tr class="separator:a4870e24f6c87aa598de8725fea9ab2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12333cf4ccef823f05e3106dc95a063d"><td class="memTemplParams" colspan="2">template&lt;typename... A&gt; </td></tr>
+<tr class="memitem:a12333cf4ccef823f05e3106dc95a063d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#a12333cf4ccef823f05e3106dc95a063d">print_ip</a> (const std::tuple&lt; A... &gt; &amp;ip)</td></tr>
+<tr class="separator:a12333cf4ccef823f05e3106dc95a063d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82797e0f5a729cf7c99fa2f72a1aaa11"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a82797e0f5a729cf7c99fa2f72a1aaa11"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceipp.html#a82797e0f5a729cf7c99fa2f72a1aaa11">print_ip</a> (const T &amp;ip)</td></tr>
 <tr class="separator:a82797e0f5a729cf7c99fa2f72a1aaa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +124,52 @@ Functions</h2></td></tr>
 <tr class="separator:af72c3acd26ec33d2f75ce879e65b6f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ac08c0c4ff2afb1260830aabc3dab4f9c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename... A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ipp::foreach_tuple </td>
+          <td>(</td>
+          <td class="paramtype">const F &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::tuple&lt; A... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12333cf4ccef823f05e3106dc95a063d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ipp::print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const std::tuple&lt; A... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a82797e0f5a729cf7c99fa2f72a1aaa11"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,16 +260,16 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a37fa5b8fff60e9b06f963a193b6775cb"></a>
+<a class="anchor" id="a4870e24f6c87aa598de8725fea9ab2ff"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename... A&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::string ipp::to_string </td>
           <td>(</td>
-          <td class="paramtype">const std::tuple&lt; T, T, T, T &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::tuple&lt; A... &gt; &amp;&#160;</td>
           <td class="paramname"><em>ip</em></td><td>)</td>
           <td></td>
         </tr>

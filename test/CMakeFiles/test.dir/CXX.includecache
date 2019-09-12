@@ -21,6 +21,8 @@ cstdint
 -
 climits
 -
+functional
+-
 
 /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp
 ../lib/print_ip.h
