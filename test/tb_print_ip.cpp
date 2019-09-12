@@ -116,7 +116,7 @@ TEST(test_print_ip,long_test)
         EXPECT_EQ(ipp::to_string(static_cast<long long int>(ip_num)),ip_gold);
     }
 
-    EXPECT_EQ(ipp::to_string(18446744073709551613U),"255.255.255.255.255.255.255.255");
+    EXPECT_EQ(ipp::to_string(18446744073709551613U),"255.255.255.255.255.255.255.253");
     EXPECT_EQ(ipp::to_string(9223372036854775807),"127.255.255.255.255.255.255.255");
 }
 //---------------------------------------------------------------------------------------
@@ -242,9 +242,15 @@ TEST(test_print_ip,tuple_test)
         EXPECT_EQ(ipp::to_string(ip_tpl),ip_gold);
     }
 
-    EXPECT_EQ(ipp::to_string(std::make_tuple(255,255,255,255)),"255.255.255.255");
-    EXPECT_EQ(ipp::to_string(std::make_tuple(127,255,255,255)),"127.255.255.255");
-    EXPECT_EQ(ipp::to_string(std::make_tuple(1,2,3,4)),"1.2.3.4");
-    EXPECT_EQ(ipp::to_string(std::make_tuple(10,20,30,40)),"10.20.30.40");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0)),"0");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1)),"0.1");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2)),"0.1.2");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3)),"0.1.2.3");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4)),"0.1.2.3.4");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4,5)),"0.1.2.3.4.5");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4,5,6)),"0.1.2.3.4.5.6");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4,5,6,7)),"0.1.2.3.4.5.6.7");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4,5,6,7,8)),"0.1.2.3.4.5.6.7.8");
+    EXPECT_EQ(ipp::to_string(std::make_tuple(0,1,2,3,4,5,6,7,8,9)),"0.1.2.3.4.5.6.7.8.9");
 }
 //---------------------------------------------------------------------------------------

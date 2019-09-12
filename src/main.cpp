@@ -17,11 +17,14 @@ int main(int,char**)
     std::vector<int> vip{255,0,255,0};
     std::list<int> lip{1,255,1,255};
     std::tuple<int,int,int,int> tip{255,1,0,127};
+    std::tuple<double,int> tipv{9.5,-1};
 
     ipp::print_ip(sip);
     ipp::print_ip(vip);
     ipp::print_ip(lip);
     ipp::print_ip(tip);
+
+    ipp::print_ip(tipv);
 
     return 0;
 }

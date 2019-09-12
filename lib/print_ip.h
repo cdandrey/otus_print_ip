@@ -8,6 +8,7 @@
 #include <tuple>
 #include <cstdint>
 #include <climits>
+#include <functional>
 
 namespace ipp
 {
@@ -65,15 +66,43 @@ namespace ipp
     //-------------------------------------
 
 
-    template<typename T>
-    std::string to_string(const std::tuple<T,T,T,T> &ip)
+    template<std::size_t I,typename F,typename... A>
+    struct foreach
+    {
+        static void next(F& f,const std::tuple<A...>& t)
+        {
+            const std::size_t i = sizeof...(A) - I; 
+            f.operator()( std::get<i>(t) );
+            foreach<I-1,F,A...>::next(f,t);
+        }
+    };
+    //-------------------------------------
+
+
+    template<typename F,typename... A>
+    struct foreach<0,F,A...>
+    {
+        static void next(F&,const std::tuple<A...>&){}
+    };
+    //-------------------------------------
+
+
+    template<typename F,typename... A>
+    void foreach_tuple(F &f,const std::tuple<A...> &t)
+    {
+        foreach<sizeof...(A),F,A...>::next(f,t);
+    }
+    //-------------------------------------
+
+
+    template<typename... A>
+    std::string to_string(const std::tuple<A...> &ip)
     {
         std::string tmp{""};
 
-        tmp =         std::to_string(std::get<0>(ip)) 
-              + "." + std::to_string(std::get<1>(ip)) 
-              + "." + std::to_string(std::get<2>(ip)) 
-              + "." + std::to_string(std::get<3>(ip));
+        foreach_tuple([&tmp](auto x){tmp += std::to_string(x) + ".";},ip);
+
+        tmp.pop_back();
 
         return tmp;
     }
