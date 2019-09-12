@@ -100,7 +100,7 @@ namespace ipp
     {
         std::string tmp{""};
 
-        foreach_tuple([&tmp](auto x){tmp += std::to_string(x) + ".";},ip);
+        foreach_tuple([&tmp](const auto& x){tmp += std::to_string(x) + ".";},ip);
 
         tmp.pop_back();
 
