@@ -16,12 +16,16 @@ int main(int,char**)
     std::string sip{"1.1.1.255"};
     std::vector<int> vip{255,0,255,0};
     std::list<int> lip{1,255,1,255};
-    std::tuple<int,int,int,int> tip{255,1,0,127};
 
     ipp::print_ip(sip);
     ipp::print_ip(vip);
     ipp::print_ip(lip);
-    ipp::print_ip(tip);
+
+    std::tuple<int> tip_1{255};
+    ipp::print_ip(tip_1);
+
+    std::tuple<int,int,int,int> tip_2{255,1,0,127};
+    ipp::print_ip(tip_2);
 
     return 0;
 }

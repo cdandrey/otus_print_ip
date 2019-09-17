@@ -1,0 +1,1 @@
+/usr/bin/g++    -rdynamic CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o  -o tb_print_ip -Wl,-Bstatic -lgtest -lgtest_main -Wl,-Bdynamic -lpthread ../lib/liblibipp.a 

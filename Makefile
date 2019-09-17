@@ -205,17 +205,17 @@ libipp/fast:
 .PHONY : libipp/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named tb_print_ip
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+tb_print_ip: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tb_print_ip
+.PHONY : tb_print_ip
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
-.PHONY : test/fast
+tb_print_ip/fast:
+	$(MAKE) -f test/CMakeFiles/tb_print_ip.dir/build.make test/CMakeFiles/tb_print_ip.dir/build
+.PHONY : tb_print_ip/fast
 
 # Help Target
 help:
@@ -233,7 +233,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... print_ip"
 	@echo "... libipp"
-	@echo "... test"
+	@echo "... tb_print_ip"
 .PHONY : help
 
 

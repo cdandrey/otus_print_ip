@@ -139,5 +139,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/print_ip.dir/DependInfo.cmake"
   "lib/CMakeFiles/libipp.dir/DependInfo.cmake"
-  "test/CMakeFiles/test.dir/DependInfo.cmake"
+  "test/CMakeFiles/tb_print_ip.dir/DependInfo.cmake"
   )

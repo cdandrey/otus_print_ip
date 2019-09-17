@@ -29,7 +29,7 @@
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/install.dir
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/list_install_components.dir
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/rebuild_cache.dir
-/home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/test.dir
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/package.dir
+/home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/tb_print_ip.dir
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/package_source.dir
 /home/travis/build/cdandrey/otus_print_ip/test/CMakeFiles/edit_cache.dir

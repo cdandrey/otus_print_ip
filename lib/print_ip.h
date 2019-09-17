@@ -9,11 +9,24 @@
 #include <cstdint>
 #include <climits>
 #include <functional>
+#include <type_traits>
 
 namespace ipp
 {
     template<typename T>
-    std::string to_string(const T &ip)
+    //std::enable_if_t<std::is_arithmetic_v<T>,std::string> gnu 5.4 - не поддерживает is_arrithmetic
+    std::enable_if_t<std::is_same<T,char>::value || 
+                     std::is_same<T,unsigned char>::value ||
+                     std::is_same<T,short>::value ||
+                     std::is_same<T,unsigned short>::value ||
+                     std::is_same<T,int>::value ||
+                     std::is_same<T,unsigned int>::value ||
+                     std::is_same<T,long int>::value ||
+                     std::is_same<T,long unsigned int>::value ||
+                     std::is_same<T,long long int>::value ||
+                     std::is_same<T,long long unsigned int>::value,
+                     std::string>
+    tostr(const T &ip)
     {
         using UT = typename std::make_unsigned<T>::type;
 
@@ -37,22 +50,8 @@ namespace ipp
 
 
     template<typename T> 
-    std::string to_string(const std::vector<T> &ip)
-    {
-        std::string tmp{""};
-
-        for (const auto &x : ip)
-            tmp += (std::to_string(x) + ".");
-            
-        tmp.pop_back(); // remove last '.'
-
-        return tmp;
-    }
-    //-------------------------------------
-
-
-    template<typename T> 
-    std::string to_string(const std::list<T> &ip)
+    decltype(std::declval<T>().cbegin(), std::declval<T>().cend(), std::string())
+    tostr(const T &ip)
     {
         std::string tmp{""};
 
@@ -76,7 +75,6 @@ namespace ipp
             foreach<I-1,F,A...>::next(f,t);
         }
     };
-    //-------------------------------------
 
 
     template<typename F,typename... A>
@@ -84,7 +82,6 @@ namespace ipp
     {
         static void next(const F&,const std::tuple<A...>&){}
     };
-    //-------------------------------------
 
 
     template<typename F,typename... A>
@@ -94,9 +91,21 @@ namespace ipp
     }
     //-------------------------------------
 
+    template<class...> struct conjunction : std::true_type { };
+    template<class B1> struct conjunction<B1> : B1 { };
+    template<class B1, class... Bn>
+    struct conjunction<B1, Bn...> : std::conditional_t<bool(B1::value), conjunction<Bn...>, B1> {};
+    
+    template<typename T,typename... A>
+    struct is_same_tuple 
+    { 
+        //static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value; std::conjunction псс 5.4 - не поддерживает
+        static constexpr bool value = conjunction<std::is_same<T,A>...>::value;
+    };
 
     template<typename... A>
-    std::string to_string(const std::tuple<A...> &ip)
+    std::enable_if_t<is_same_tuple<A...>::value,std::string>
+    tostr(const std::tuple<A...> &ip)
     {
         std::string tmp{""};
 
@@ -109,18 +118,10 @@ namespace ipp
     //-------------------------------------
 
 
-    template<typename... A>
-    void print_ip(const std::tuple<A...>& ip)
-    {
-        std::cout << to_string(ip) << std::endl;
-    }
-    //-------------------------------------
-
-
     template<typename T>
     void print_ip(const T& ip)
     {
-        std::cout << to_string(ip) << std::endl;
+        std::cout << tostr(ip) << std::endl;
     }
     //-------------------------------------
 

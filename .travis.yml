@@ -27,6 +27,7 @@ script:
 - cmake --build .
 - cmake --build . --target package
 - doxygen Doxyfile
+- ./test/tb_print_ip
 deploy:
   provider: script
   skip_cleanup: true

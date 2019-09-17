@@ -136,7 +136,7 @@ CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 CMAKE_PROJECT_NAME:STATIC=prj_print_ip
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.0.32
+CMAKE_PROJECT_VERSION:STATIC=0.0.45
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
@@ -145,7 +145,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 CMAKE_PROJECT_VERSION_MINOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=32
+CMAKE_PROJECT_VERSION_PATCH:STATIC=45
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -261,10 +261,10 @@ prj_print_ip_BINARY_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip
 prj_print_ip_SOURCE_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip
 
 //Value Computed by CMake
-test_BINARY_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip/test
+tb_print_ip_BINARY_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip/test
 
 //Value Computed by CMake
-test_SOURCE_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip/test
+tb_print_ip_SOURCE_DIR:STATIC=/home/travis/build/cdandrey/otus_print_ip/test
 
 
 ########################

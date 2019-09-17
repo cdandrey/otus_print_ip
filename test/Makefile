@@ -179,19 +179,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/test.dir/rule:
-	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test.dir/rule
-.PHONY : test/CMakeFiles/test.dir/rule
+test/CMakeFiles/tb_print_ip.dir/rule:
+	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/tb_print_ip.dir/rule
+.PHONY : test/CMakeFiles/tb_print_ip.dir/rule
 
 # Convenience name for target.
-test: test/CMakeFiles/test.dir/rule
+tb_print_ip: test/CMakeFiles/tb_print_ip.dir/rule
 
-.PHONY : test
+.PHONY : tb_print_ip
 
 # fast build rule for target.
-test/fast:
-	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
-.PHONY : test/fast
+tb_print_ip/fast:
+	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/tb_print_ip.dir/build.make test/CMakeFiles/tb_print_ip.dir/build
+.PHONY : tb_print_ip/fast
 
 tb_print_ip.o: tb_print_ip.cpp.o
 
@@ -199,7 +199,7 @@ tb_print_ip.o: tb_print_ip.cpp.o
 
 # target to build an object file
 tb_print_ip.cpp.o:
-	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/tb_print_ip.cpp.o
+	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/tb_print_ip.dir/build.make test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o
 .PHONY : tb_print_ip.cpp.o
 
 tb_print_ip.i: tb_print_ip.cpp.i
@@ -208,7 +208,7 @@ tb_print_ip.i: tb_print_ip.cpp.i
 
 # target to preprocess a source file
 tb_print_ip.cpp.i:
-	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/tb_print_ip.cpp.i
+	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/tb_print_ip.dir/build.make test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.i
 .PHONY : tb_print_ip.cpp.i
 
 tb_print_ip.s: tb_print_ip.cpp.s
@@ -217,7 +217,7 @@ tb_print_ip.s: tb_print_ip.cpp.s
 
 # target to generate assembly for a file
 tb_print_ip.cpp.s:
-	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/tb_print_ip.cpp.s
+	cd /home/travis/build/cdandrey/otus_print_ip && $(MAKE) -f test/CMakeFiles/tb_print_ip.dir/build.make test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.s
 .PHONY : tb_print_ip.cpp.s
 
 # Help Target
@@ -231,8 +231,8 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... package"
+	@echo "... tb_print_ip"
 	@echo "... package_source"
 	@echo "... edit_cache"
 	@echo "... tb_print_ip.o"
