@@ -14,18 +14,18 @@
 namespace ipp
 {
     template<typename T>
-    //std::enable_if_t<std::is_arithmetic_v<T>,std::string> gnu 5.4 - не поддерживает is_arrithmetic
-    std::enable_if_t<std::is_same<T,char>::value || 
-                     std::is_same<T,unsigned char>::value ||
-                     std::is_same<T,short>::value ||
-                     std::is_same<T,unsigned short>::value ||
-                     std::is_same<T,int>::value ||
-                     std::is_same<T,unsigned int>::value ||
-                     std::is_same<T,long int>::value ||
-                     std::is_same<T,long unsigned int>::value ||
-                     std::is_same<T,long long int>::value ||
-                     std::is_same<T,long long unsigned int>::value,
-                     std::string>
+    std::enable_if_t<std::is_arithmetic_v<T>,std::string>
+    //std::enable_if_t<std::is_same<T,char>::value || 
+    //                 std::is_same<T,unsigned char>::value ||
+    //                 std::is_same<T,short>::value ||
+    //                 std::is_same<T,unsigned short>::value ||
+    //                 std::is_same<T,int>::value ||
+    //                 std::is_same<T,unsigned int>::value ||
+    //                 std::is_same<T,long int>::value ||
+    //                 std::is_same<T,long unsigned int>::value ||
+    //                 std::is_same<T,long long int>::value ||
+    //                 std::is_same<T,long long unsigned int>::value,
+    //                 std::string>
     tostr(const T &ip)
     {
         using UT = typename std::make_unsigned<T>::type;

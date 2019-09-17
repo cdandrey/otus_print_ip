@@ -6,7 +6,7 @@ addons:
  apt:
    packages:
     - doxygen      
-    - g++-7 
+    - g++-6 
 
 before_script:
   #install google-test
