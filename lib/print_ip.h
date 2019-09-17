@@ -13,7 +13,8 @@
 namespace ipp
 {
     template<typename T>
-    std::string to_string(const T &ip)
+    std::enable_if_t<std::is_arithmetic_v<T>,std::string>
+    tostr(const T &ip)
     {
         using UT = typename std::make_unsigned<T>::type;
 
@@ -37,22 +38,8 @@ namespace ipp
 
 
     template<typename T> 
-    std::string to_string(const std::vector<T> &ip)
-    {
-        std::string tmp{""};
-
-        for (const auto &x : ip)
-            tmp += (std::to_string(x) + ".");
-            
-        tmp.pop_back(); // remove last '.'
-
-        return tmp;
-    }
-    //-------------------------------------
-
-
-    template<typename T> 
-    std::string to_string(const std::list<T> &ip)
+    decltype(std::declval<T>().cbegin(), std::declval<T>().cend(), std::string())
+    tostr(const T &ip)
     {
         std::string tmp{""};
 
@@ -76,7 +63,6 @@ namespace ipp
             foreach<I-1,F,A...>::next(f,t);
         }
     };
-    //-------------------------------------
 
 
     template<typename F,typename... A>
@@ -84,7 +70,6 @@ namespace ipp
     {
         static void next(const F&,const std::tuple<A...>&){}
     };
-    //-------------------------------------
 
 
     template<typename F,typename... A>
@@ -94,9 +79,15 @@ namespace ipp
     }
     //-------------------------------------
 
+    template<typename T,typename... A>
+    struct is_same_tuple 
+    { 
+        static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value;
+    };
 
     template<typename... A>
-    std::string to_string(const std::tuple<A...> &ip)
+    std::enable_if_t<is_same_tuple<A...>::value,std::string>
+    tostr(const std::tuple<A...> &ip)
     {
         std::string tmp{""};
 
@@ -109,18 +100,10 @@ namespace ipp
     //-------------------------------------
 
 
-    template<typename... A>
-    void print_ip(const std::tuple<A...>& ip)
-    {
-        std::cout << to_string(ip) << std::endl;
-    }
-    //-------------------------------------
-
-
     template<typename T>
     void print_ip(const T& ip)
     {
-        std::cout << to_string(ip) << std::endl;
+        std::cout << tostr(ip) << std::endl;
     }
     //-------------------------------------
 

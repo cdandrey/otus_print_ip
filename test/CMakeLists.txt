@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.2)
 
-set(THIS test)
+set(THIS tb_print_ip)
 set(SOURCES tb_print_ip.cpp)
 set(LIBS libipp)
 
