@@ -9,11 +9,12 @@
 #include <cstdint>
 #include <climits>
 #include <functional>
+#include <type_traits>
 
 namespace ipp
 {
     template<typename T>
-    std::enable_if_t<std::is_arithmetic<T>::value,std::string>
+    std::enable_if_t<std::is_arithmetic_v<T>,std::string>
     tostr(const T &ip)
     {
         using UT = typename std::make_unsigned<T>::type;
