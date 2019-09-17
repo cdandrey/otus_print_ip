@@ -23,6 +23,8 @@ namespace ipp
                      std::is_same<T,unsigned int>::value ||
                      std::is_same<T,long int>::value ||
                      std::is_same<T,long unsigned int>::value,
+                     std::is_same<T,long long int>::value ||
+                     std::is_same<T,long long unsigned int>::value,
                      std::string>
     tostr(const T &ip)
     {
