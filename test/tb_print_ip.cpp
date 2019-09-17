@@ -86,7 +86,7 @@ TEST(test_print_ip,int_test)
         EXPECT_EQ(ipp::tostr(static_cast<int>(ip_num)),ip_gold);
     }
 
-    EXPECT_EQ(ipp::tostr(4294967295),"255.255.255.255");
+    EXPECT_EQ(ipp::tostr(4294967295U),"255.255.255.255");
     EXPECT_EQ(ipp::tostr(2147483647),"127.255.255.255");
 }
 //---------------------------------------------------------------------------------------
