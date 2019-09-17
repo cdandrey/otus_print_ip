@@ -2,7 +2,9 @@ language: cpp
 branches:
   only:
     - master
-addons:
+addons:    
+  sources:
+    - ubuntu-toolchain-r-test
  apt:
    packages:
     - doxygen      
@@ -24,7 +26,7 @@ before_script:
 - sudo apt-get update -qq
 - cd $TRAVIS_BUILD_DIR
 script:
-- cmake .
+- CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
 - cmake --build .
 - cmake --build . --target package
 - doxygen Doxyfile
