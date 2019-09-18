@@ -118,6 +118,7 @@ namespace ipp
     //-------------------------------------
 
 
+
     template<typename T>
     void print_ip(const T& ip)
     {
