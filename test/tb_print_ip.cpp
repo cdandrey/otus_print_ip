@@ -17,20 +17,11 @@ std::uniform_int_distribution<unsigned> dis_ip(0,255);
 
 TEST(test_print_ip,char_test)
 {
-
-    std::string ip_gold;
-    unsigned char ip_num;
-
-    for (unsigned i = 0; i < N; ++i)
+    for (int i = static_cast<int>(std::numeric_limits<char>::min()); 
+             i <= static_cast<int>(std::numeric_limits<char>::max()); ++i)
     {
-        ip_num = dis_ip(gen);
-        ip_gold = std::to_string(ip_num);
-
-        EXPECT_EQ(ipp::tostr(static_cast<char>(ip_num)),ip_gold);
+        EXPECT_EQ(ipp::tostr(static_cast<char>(i)),std::to_string(static_cast<unsigned char>(i)));
     }
-
-    EXPECT_EQ(ipp::tostr(static_cast<char>(-1)),"255");
-    EXPECT_EQ(ipp::tostr(static_cast<char>(127)),"127");
 }
 //---------------------------------------------------------------------------------------
 

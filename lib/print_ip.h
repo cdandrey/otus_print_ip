@@ -14,7 +14,8 @@
 namespace ipp
 {
     template<typename T>
-    //std::enable_if_t<std::is_arithmetic_v<T>,std::string> gnu 5.4 - не поддерживает is_arrithmetic
+    //not supported gcc 5.4
+    //std::enable_if_t<std::is_arithmetic_v<T>,std::string>
     std::enable_if_t<std::is_same<T,char>::value || 
                      std::is_same<T,unsigned char>::value ||
                      std::is_same<T,short>::value ||
@@ -99,7 +100,8 @@ namespace ipp
     template<typename T,typename... A>
     struct is_same_tuple 
     { 
-        //static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value; std::conjunction псс 5.4 - не поддерживает
+        //not supported gcc 5.4
+        //static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value;
         static constexpr bool value = conjunction<std::is_same<T,A>...>::value;
     };
 
@@ -116,6 +118,7 @@ namespace ipp
         return tmp;
     }
     //-------------------------------------
+
 
 
     template<typename T>
