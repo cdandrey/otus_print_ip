@@ -8,6 +8,10 @@ addons:
     - doxygen
 
 before_script:
+  # install C++17
+  - sudo apt-get install -qq g++-7
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
+
   #install google-test
   - sudo apt-get install libgtest-dev
   - sudo apt-get install cmake # install cmake
