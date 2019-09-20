@@ -9,7 +9,7 @@ addons:
 
 before_script:
   # install C++17
-  - sudo apt-get install -qq g++-7
+  - sudo apt-get install -qq g++-6
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
 
   #install google-test
