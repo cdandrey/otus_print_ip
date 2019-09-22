@@ -14,8 +14,8 @@ addons:
  apt:
     packages:
       - doxygen
-      - gcc-7
-      - g++-7
+      - gcc-9
+      - g++-9
     sources:
       - ubuntu-toolchain-r-test
 
