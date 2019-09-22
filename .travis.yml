@@ -9,31 +9,15 @@ branches:
 #install:
 #- sudo apt-get install -qq g++-10
 #- export CXX="g++-10"
-matrix:
-  include:
-# GCC 7 c++17 
-    - env: COMPILER=g++-7 BUILD_TYPE=Debug GSL_CXX_STANDARD=17
-      addons: *gcc7
-
-    - env: COMPILER=g++-7 BUILD_TYPE=Release GSL_CXX_STANDARD=17
-      addons: *gcc7
-install:
-  # Set the ${CXX} variable properly
-  - export CXX=${COMPILER}
-  - ${CXX} --version
-
-  # Dependencies required by the CI are installed in ${TRAVIS_BUILD_DIR}/deps/
-  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-  - mkdir -p "${DEPS_DIR}"
-  - cd "${DEPS_DIR}"
-
-  # Travis machines have 2 cores
-  - JOBS=2
 
 addons:    
  apt:
     packages:
       - doxygen
+      - gcc-7
+      - g++-7
+    sources:
+      - ubuntu-toolchain-r-test
 
 before_script:
   #install google-test
