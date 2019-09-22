@@ -60,15 +60,15 @@ include test/CMakeFiles/tb_print_ip.dir/flags.make
 test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o: test/CMakeFiles/tb_print_ip.dir/flags.make
 test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o: test/tb_print_ip.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/cdandrey/otus_print_ip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o"
-	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o -c /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp
+	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.o -c /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp
 
 test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.i"
-	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp > CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.i
+	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp > CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.i
 
 test/CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.s"
-	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp -o CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.s
+	cd /home/travis/build/cdandrey/otus_print_ip/test && /usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/cdandrey/otus_print_ip/test/tb_print_ip.cpp -o CMakeFiles/tb_print_ip.dir/tb_print_ip.cpp.s
 
 # Object files for target tb_print_ip
 tb_print_ip_OBJECTS = \

@@ -1,9 +1,9 @@
 Package: prj_print_ip
-Version: 0.0.51
+Version: 0.0.65
 Section: devel
 Priority: optional
 Architecture: amd64
-Installed-Size: 89
+Installed-Size: 92
 Maintainer: cdandrey@gmail.com
 Description: prj_print_ip built using CMake
 
