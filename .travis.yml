@@ -9,7 +9,9 @@ addons:
 
 before_install:
   # C++17
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/src
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/lib
   - sudo apt-get update -qq
 
 install: 
