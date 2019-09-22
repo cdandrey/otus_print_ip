@@ -2,26 +2,24 @@ language: cpp
 branches:
   only:
     - master
-#before_install:
-#- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-#- sudo apt-get update -qq
-#
-#install:
-#- sudo apt-get install -qq g++-10
-#- export CXX="g++-10"
+
+before_install:
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+
+install:
+- sudo apt-get install -qq g++-9
+- export CXX="g++-9"
 
 addons:    
- apt:
+  apt:
     packages:
       - doxygen
-      - gcc-9
-      - g++-9
-    sources:
-      - ubuntu-toolchain-r-test
+      - libstdc++9
 
-before_script:
-  #install google-test
-  - sudo apt-get install libgtest-dev
+  before_script:
+    #install google-test
+    - sudo apt-get install libgtest-dev
   - sudo apt-get install cmake # install cmake
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
