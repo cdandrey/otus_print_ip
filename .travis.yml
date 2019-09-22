@@ -2,6 +2,14 @@ language: cpp
 branches:
   only:
     - master
+before_install:
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+
+install:
+- sudo apt-get install -qq g++-8
+- export CXX="g++-8"
+
 addons:    
  apt:
     packages:
@@ -23,8 +31,7 @@ before_script:
   - sudo apt-get update -qq
   - cd $TRAVIS_BUILD_DIR
 script:  
-  #- cmake .
-  - cmake -D CMAKE_C_COMPILER=gcc-8 -D CMAKE_CXX_COMPILER=g++-8 .
+  - cmake .
   - cmake --build .
   - cmake --build . --target package
   - doxygen Doxyfile
