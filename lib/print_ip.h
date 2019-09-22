@@ -15,7 +15,7 @@ namespace ipp
 {
     template<typename T>
     //not supported gcc 5.4
-    std::enable_if_t<std::is_arithmetic_v<T>,std::string>
+    std::enable_if_t<std::is_arithmetic<T>::value,std::string>
     //std::enable_if_t<std::is_same<T,char>::value || 
     //                 std::is_same<T,unsigned char>::value ||
     //                 std::is_same<T,short>::value ||
