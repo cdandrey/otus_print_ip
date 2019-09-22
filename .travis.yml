@@ -7,8 +7,8 @@ before_install:
 - sudo apt-get update -qq
 
 install:
-- sudo apt-get install -qq g++-9
-- export CXX="g++-9"
+- sudo apt-get install -qq g++-10
+- export CXX="g++-10"
 
 addons:    
  apt:
