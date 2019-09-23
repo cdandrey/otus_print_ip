@@ -80,10 +80,15 @@ namespace ipp
     }
     //-------------------------------------
 
+    template<class...> struct conjunction : std::true_type { };
+    template<class B1> struct conjunction<B1> : B1 { };
+    template<class B1, class... Bn>
+    struct conjunction<B1, Bn...> : std::conditional_t<bool(B1::value), conjunction<Bn...>, B1> {};
+    
     template<typename T,typename... A>
     struct is_same_tuple 
     { 
-        static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value;
+        static constexpr bool value = conjunction<std::is_same<T,A>...>::value;
     };
 
     template<typename... A>
