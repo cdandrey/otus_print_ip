@@ -83,7 +83,7 @@ namespace ipp
     template<typename T,typename... A>
     struct is_same_tuple 
     { 
-        static constexpr bool value = std::conjunction<std::is_same<T,A>...>::value;
+        static constexpr bool value = conjunction<std::is_same<T,A>...>::value;
     };
 
     template<typename... A>
