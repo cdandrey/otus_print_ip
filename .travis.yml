@@ -12,12 +12,12 @@ install:
 - export CXX="g++-9"
 
 addons:    
-  apt:
+ apt:
     packages:
       - doxygen
 
-  before_script:
-    #install google-test
+before_script:
+  #install google-test
   - sudo apt-get install libgtest-dev
   - sudo apt-get install cmake # install cmake
   - cd /usr/src/gtest
