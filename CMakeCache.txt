@@ -25,15 +25,15 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-8
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-8
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-9
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-8
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-9
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -136,7 +136,7 @@ CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 CMAKE_PROJECT_NAME:STATIC=prj_print_ip
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.0.65
+CMAKE_PROJECT_VERSION:STATIC=0.0.75
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
@@ -145,7 +145,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 CMAKE_PROJECT_VERSION_MINOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=65
+CMAKE_PROJECT_VERSION_PATCH:STATIC=75
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=

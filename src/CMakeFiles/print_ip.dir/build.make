@@ -60,15 +60,15 @@ include src/CMakeFiles/print_ip.dir/flags.make
 src/CMakeFiles/print_ip.dir/main.cpp.o: src/CMakeFiles/print_ip.dir/flags.make
 src/CMakeFiles/print_ip.dir/main.cpp.o: src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/travis/build/cdandrey/otus_print_ip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/print_ip.dir/main.cpp.o"
-	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/print_ip.dir/main.cpp.o -c /home/travis/build/cdandrey/otus_print_ip/src/main.cpp
+	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/print_ip.dir/main.cpp.o -c /home/travis/build/cdandrey/otus_print_ip/src/main.cpp
 
 src/CMakeFiles/print_ip.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/print_ip.dir/main.cpp.i"
-	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/travis/build/cdandrey/otus_print_ip/src/main.cpp > CMakeFiles/print_ip.dir/main.cpp.i
+	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/travis/build/cdandrey/otus_print_ip/src/main.cpp > CMakeFiles/print_ip.dir/main.cpp.i
 
 src/CMakeFiles/print_ip.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/print_ip.dir/main.cpp.s"
-	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/cdandrey/otus_print_ip/src/main.cpp -o CMakeFiles/print_ip.dir/main.cpp.s
+	cd /home/travis/build/cdandrey/otus_print_ip/src && /usr/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/travis/build/cdandrey/otus_print_ip/src/main.cpp -o CMakeFiles/print_ip.dir/main.cpp.s
 
 # Object files for target print_ip
 print_ip_OBJECTS = \
