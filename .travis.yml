@@ -15,6 +15,7 @@ addons:
  apt:
     packages:
       - doxygen
+      - libstdc++-9-dev
 
 before_script:
   #install google-test
